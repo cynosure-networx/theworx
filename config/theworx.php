@@ -6,5 +6,5 @@ return [
     'INITIAL_USER_PASSWORD' => 'password',
     'INITIAL_USER_FIRST_NAME'=> 'John',
     'INITIAL_USER_LAST_NAME' => 'Doe',
-    'INITIAL_USER_EMAIL' => 'user@theworx.dev',
+    'INITIAL_USER_EMAIL' => 'john.doe@theworx.dev',
 ];

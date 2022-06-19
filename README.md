@@ -17,6 +17,23 @@ Email: user@theworx.dev
 ## Instructions
 
 github template -> to new project
+$ npm install
+$ composer update
+
+
+VALET VERSION
+$ cp .env.example .env
+edit .env
+- App Name
+- App URL
+- DB Database
+
+$ php artisan key:generate
+$ php artisan migrate --seed
+$ valet link <project name>
+$ valet secure <project name>
+
+Modify config>theworx.php
 
 Laravel 9 boilerplate PHP version is ^8.0
 
