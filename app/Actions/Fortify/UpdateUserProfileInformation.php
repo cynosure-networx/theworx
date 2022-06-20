@@ -34,8 +34,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $this->updateVerifiedUser($user, $input);
         } else {
             $user->forceFill([
-                'first_name' => $input['name'],
-                'last_name' => $input['name'],
+                'first_name' => $input['first_name'],
+                'last_name' => $input['last_name'],
                 'name' => $input['first_name']." ".$input['last_name'],
                 'email' => $input['email'],
             ])->save();

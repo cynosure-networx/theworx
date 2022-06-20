@@ -6,6 +6,8 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Jenssegers\Date\Date;
+use Illuminate\Support\Str;
 
 class UsersSeeder extends Seeder
 {
@@ -23,10 +25,14 @@ class UsersSeeder extends Seeder
         DB::table('users')->insert([
             'first_name' => config('theworx.INITIAL_USER_FIRST_NAME'),
             'last_name' => config('theworx.INITIAL_USER_LAST_NAME'),
-            'name' => config('theworx.INITIAL_USER_LAST_NAME').' '.config('theworx.INITIAL_USER_LAST_NAME'),
+            'name' => config('theworx.INITIAL_USER_FIRST_NAME').' '.config('theworx.INITIAL_USER_LAST_NAME'),
             'username' => config('theworx.INITIAL_USER_USERNAME'),
             'email' => config('theworx.INITIAL_USER_EMAIL'),
             'password' => HASH::make(config('theworx.INITIAL_USER_PASSWORD')),
+            'email_verified_at' => Date::now(),
+            'remember_token' => Str::random(10),
+            'created_at' => Date::now(),
+            'updated_at' => Date::now(),
           ]);
     }
 }
