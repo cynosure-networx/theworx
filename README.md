@@ -11,7 +11,7 @@ Username: misteruser
 Password: password
 First Name: John
 Last Name: Doe
-Email: user@theworx.dev
+Email: john.doe@theworx.dev
 
 
 ## Instructions

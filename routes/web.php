@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Calendar;
 use App\Models\Event;
 use App\Http\Controllers\Auth\SocialLoginController;
+use GuzzleHttp\Psr7\Request;
 use Spatie\Sitemap\SitemapGenerator;
 
 /*
@@ -21,6 +22,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('test', function () {
+    return view('default');
+});
+
+Route::get('/contact', function (Request $request)
+{
+
+});
+
+Route::get('home', function () {
+    return view('welcome');
+})->name('welcome');
+
 Route::get('/template', function () {
     return view('template');
 });
@@ -34,6 +48,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
 
 Route::view('/calendar', 'calendar');
 Livewire::component('calendar', Calendar::class);
