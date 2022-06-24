@@ -1,10 +1,12 @@
 <?php
 
 return [
-    'WEBSITE_NAME' => 'theWORX',
-    'INITIAL_USER_USERNAME' => 'misteruser',
-    'INITIAL_USER_PASSWORD' => 'password',
-    'INITIAL_USER_FIRST_NAME'=> 'John',
-    'INITIAL_USER_LAST_NAME' => 'Doe',
-    'INITIAL_USER_EMAIL' => 'john.doe@theworx.dev',
+    'company' => 'Cynosure Networx',
+    'website-name' => 'theWORX',
+    'copyright-year' => '2022',
+    'initial-user-username' => 'misteruser',
+    'initial-user-password' => 'password',
+    'initial-user-first-name' => 'John',
+    'initial-user-last-name' => 'Doe',
+    'initial-user-email' => 'john.doe@theworx.dev',
 ];

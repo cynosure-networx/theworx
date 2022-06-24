@@ -10,14 +10,14 @@ class Calendar extends Component
     public $events = '';
     public function getevent()
     {
-        $events = Event::select('id','title','start')->get();
+        $events = Event::select('id', 'title', 'start')->get();
         return  json_encode($events);
     }
     /**
-    * Write code on Method
-    *
-    * @return response()
-    */
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function addevent($event)
     {
         $input['title'] = $event['title'];
@@ -25,25 +25,27 @@ class Calendar extends Component
         Event::create($input);
     }
     /**
-    * Write code on Method
-    *
-    * @return response()
-    */
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function eventDrop($event, $oldEvent)
     {
-      $eventdata = Event::find($event['id']);
-      $eventdata->start = $event['start'];
-      $eventdata->save();
+        $eventdata = Event::find($event['id']);
+        $eventdata->start = $event['start'];
+        $eventdata->save();
     }
     /**
-    * Write code on Method
-    *
-    * @return response()
-    */
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function render()
     {
-        $events = Event::select('id','title','start')->get();
+        $events = Event::select('id', 'title', 'start')->get();
+
         $this->events = json_encode($events);
+
         return view('livewire.calendar');
     }
 }

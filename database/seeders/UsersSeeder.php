@@ -23,16 +23,16 @@ class UsersSeeder extends Seeder
         });
 
         DB::table('users')->insert([
-            'first_name' => config('theworx.INITIAL_USER_FIRST_NAME'),
-            'last_name' => config('theworx.INITIAL_USER_LAST_NAME'),
-            'name' => config('theworx.INITIAL_USER_FIRST_NAME').' '.config('theworx.INITIAL_USER_LAST_NAME'),
-            'username' => config('theworx.INITIAL_USER_USERNAME'),
-            'email' => config('theworx.INITIAL_USER_EMAIL'),
-            'password' => HASH::make(config('theworx.INITIAL_USER_PASSWORD')),
+            'first_name' => config('theworx.initial-user-first-name'),
+            'last_name' => config('theworx.initial-user-last-name'),
+            'name' => config('theworx.initial-user-first-name') . ' ' . config('theworx.initial-user-last-name'),
+            'username' => config('theworx.initial-user-username'),
+            'email' => config('theworx.initial-user-email'),
+            'password' => HASH::make(config('theworx.initial-user-password')),
             'email_verified_at' => Date::now(),
             'remember_token' => Str::random(10),
             'created_at' => Date::now(),
             'updated_at' => Date::now(),
-          ]);
+        ]);
     }
 }

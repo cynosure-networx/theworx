@@ -20,15 +20,13 @@ use Spatie\Sitemap\SitemapGenerator;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('test', function () {
-    return view('default');
+    return view('test');
 });
 
-Route::get('/contact', function (Request $request)
-{
-
+Route::get('/contact', function (Request $request) {
 });
 
 Route::get('home', function () {
@@ -50,7 +48,7 @@ Route::middleware([
 });
 
 
-Route::view('/calendar', 'calendar');
+Route::view('/calendar', 'calendar')->name('calendar');
 Livewire::component('calendar', Calendar::class);
 
 /* Manually generate sitemap */
@@ -61,5 +59,5 @@ Route::get("generate-sitemap", function () {
 });
 
 // Socialite Login
-Route::get('login/social/{provider}', [SocialLoginController::class,'redirect'])->name('social.redirect');
-Route::get('login/social/{provider}/callback',[SocialLoginController::class,'callback']);
+Route::get('login/social/{provider}', [SocialLoginController::class, 'redirect'])->name('social.redirect');
+Route::get('login/social/{provider}/callback', [SocialLoginController::class, 'callback']);

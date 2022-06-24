@@ -1,13 +1,23 @@
-<x-docs>
-    <div class="pt-4 bg-gray-100">
-        <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
-            <div>
-                <x-jet-authentication-card-logo />
-            </div>
+@extends('layouts.main')
 
-            <div class="w-full sm:max-w-2xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose">
-                TERMS
-            </div>
-        </div>
-    </div>
-</x-docs>
+@section('page-title', 'Test Page')
+
+@section('page-fonts')
+    {{-- Page Fonts Go Here --}}
+@endsection
+
+@section('page-styles')
+    {{-- Page Styles Go Here --}}
+@endsection
+
+@section('header-scripts')
+    {{-- Page Header Scripts Go Here --}}
+@endsection
+
+@section('content')
+    Test page content
+@endsection
+
+@push('body-scripts')
+    {{-- Page Footer Scripts Go Here --}}
+@endpush
