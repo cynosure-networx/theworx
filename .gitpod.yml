@@ -27,5 +27,5 @@ tasks:
       npm i &&
       php artisan key:generate
     command: >
-      npm run dev
+      npm run dev &&
       php -S 0.0.0.0:8000 -t public
