@@ -18,7 +18,11 @@
 
 # Let the user know there will be a wait, then begin once MySql is initialized.
 start_spinner "Initializing MySql..." &&
+<<<<<<< HEAD
 gp await-port 3306 &&
+=======
+gp ports await 3306 &&
+>>>>>>> d9c2c73b3e8474e80d4c7ccf87d6e774e8b057b6
 stop_spinner $?
 
 # Globals

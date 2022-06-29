@@ -53,4 +53,8 @@ RUN bash -c ". /tmp/update-composer.sh" && rm /tmp/update-composer.sh
 RUN bash -c ". /tmp/scaffold-project.sh" && rm /tmp/scaffold-project.sh
 
 # Force the docker image to build by incrementing this value
+<<<<<<< HEAD
 ENV INVALIDATE_CACHE=350
+=======
+ENV INVALIDATE_CACHE=232
+>>>>>>> d9c2c73b3e8474e80d4c7ccf87d6e774e8b057b6

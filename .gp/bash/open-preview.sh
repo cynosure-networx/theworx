@@ -28,7 +28,11 @@ function main() {
     start_spinner "Opening preview when system is ready..."
     gp sync-await gitpod-inited &&
     stop_spinner 0 &&
+<<<<<<< HEAD
     gp await-port "$port" &&
+=======
+    gp ports await "$port" &&
+>>>>>>> d9c2c73b3e8474e80d4c7ccf87d6e774e8b057b6
     gp preview "$(gp url "$port")$path" > /dev/null 2>&1
   else
     gp preview "$(gp url "$port")$path" > /dev/null 2>&1
