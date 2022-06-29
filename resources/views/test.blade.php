@@ -1,23 +1,15 @@
-@extends('layouts.main')
+<x-main-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 
-@section('page-title', 'Test Page')
-
-@section('page-fonts')
-    {{-- Page Fonts Go Here --}}
-@endsection
-
-@section('page-styles')
-    {{-- Page Styles Go Here --}}
-@endsection
-
-@section('header-scripts')
-    {{-- Page Header Scripts Go Here --}}
-@endsection
-
-@section('content')
-    Test page content
-@endsection
-
-@push('body-scripts')
-    {{-- Page Footer Scripts Go Here --}}
-@endpush
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <x-jet-welcome />
+            </div>
+        </div>
+    </div>
+</x-main-layout>
